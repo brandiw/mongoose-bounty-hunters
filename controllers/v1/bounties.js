@@ -55,7 +55,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   db.Bounty.findOneAndDelete({ _id: req.params.id })
   .then(() => {
-    res.status(204).send({ message: 'Successful Deletion' });
+    res.status(204).send();
   })
   .catch(err => {
     console.log(err);
